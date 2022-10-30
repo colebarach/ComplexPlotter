@@ -36,11 +36,3 @@ class Complex {
     return (this.a*this.a)+(this.b*this.b);
   }
 }
-
-//Complex square(Complex input) {
-//  Complex result = new Complex(0, 0);
-//  result.a += input.a*input.a;
-//  result.a -= input.b*input.b;
-//  result.b += 2*input.a*input.b;
-//  return result;
-//}

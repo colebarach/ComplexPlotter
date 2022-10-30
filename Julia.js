@@ -26,7 +26,7 @@ function draw() {
       // c = new Complex(coordinates.x,coordinates.y);
       
       // Julia Set Variables
-      mouseCanvasPosition = canvas.pixelToCanvas(createVector(mouseX, mouseY))
+      mouseCanvasPosition = canvas.pixelToCanvas(createVector(mouseX, mouseY));
       z = new Complex(coordinates.x, coordinates.y);
       c = new Complex(mouseCanvasPosition.x, mouseCanvasPosition.y);
       
@@ -39,15 +39,15 @@ function draw() {
         }
       }
       if(hueValue == -1) {
-        pixels[index]   = 0
-        pixels[index+1] = 0
-        pixels[index+2] = 0
-        pixels[index+3] = 255
+        pixels[index]   = 0;
+        pixels[index+1] = 0;
+        pixels[index+2] = 0;
+        pixels[index+3] = 255;
       } else {
-        pixels[index]   = red(  color(hueValue,100,100))
-        pixels[index+1] = green(color(hueValue,100,100))
-        pixels[index+2] = blue( color(hueValue,100,100))
-        pixels[index+3] = 255
+        pixels[index]   = red(  color(hueValue,100,100));
+        pixels[index+1] = green(color(hueValue,100,100));
+        pixels[index+2] = blue( color(hueValue,100,100));
+        pixels[index+3] = 255;
       }
     }
   }
