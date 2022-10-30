@@ -3,6 +3,7 @@ let theme;
 
 function setup() {
   createCanvas(600,600);
+  pixelDensity(1);
   colorMode(HSB,360,100,100);
   setupCanvas();
 }
@@ -18,8 +19,8 @@ function draw() {
   for(y = 0; y < height; y++) {
     for(x = 0; x < width; x++) {
       let hueValue = -1;
-      coordinates = canvas.pixelToCanvas(createVector(x,y));
-      index = round(x*4 + y*4*width);
+      let coordinates = canvas.pixelToCanvas(createVector(x,y));
+      let index = (x + y*width)*4;
       
       // Mandlebrot Variables
       // z = new Complex(0,0);
@@ -38,6 +39,7 @@ function draw() {
           break;
         }
       }
+
       if(hueValue == -1) {
         pixels[index]   = 0;
         pixels[index+1] = 0;
@@ -53,8 +55,8 @@ function draw() {
   }
   updatePixels();
   
-  // drawAxes();
-  // drawTicks();
+  drawAxes();
+  drawTicks();
 }
 
 // Function to be rendered

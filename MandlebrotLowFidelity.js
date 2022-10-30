@@ -3,6 +3,7 @@ let theme;
 
 function setup() {
   createCanvas(200,200);
+  pixelDensity(1);
   colorMode(HSB,360,100,100);
   setupCanvas();
 }
@@ -53,8 +54,8 @@ function draw() {
   }
   updatePixels();
   
-  // drawAxes();
-  // drawTicks();
+  drawAxes();
+  drawTicks();
 }
 
 // Function to be rendered
